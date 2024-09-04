@@ -42,6 +42,7 @@ const ClickerGame: React.FC = () => {
 
   return (
     <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h1>Welcome! {username}</h1>
       <h1>Total Coins: {data?.getUser?.coins || 0}</h1>
       <button
         onClick={handleClick}
