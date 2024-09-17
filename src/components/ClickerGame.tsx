@@ -88,6 +88,7 @@ import {
   Snackbar,
   Typography,
 } from "@mui/material";
+import { log } from "console";
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
@@ -124,12 +125,16 @@ const ClickerGame: React.FC = () => {
   // Detect offline/online status
   useEffect(() => {
     const handleOnline = () => {
+      console.log("online");
+
       setIsOnline(true);
       setShowOfflineAlert(false);
       syncOfflineCoins();
     };
 
     const handleOffline = () => {
+      console.log("offline");
+
       setIsOnline(false);
       setShowOfflineAlert(true);
     };
